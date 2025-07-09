@@ -1,0 +1,42 @@
+<script>
+  alert('ALERT');
+  const bebas = prompt('PROMPT');
+  alert(bebas);
+
+  class Products{
+    
+  }
+</script>
+
+<!-- 
+    > MARKET V1
+
+    > Specs:
+        1. Buatlah mini app dengan menggunakan prompt & alert html
+        2. Pengguna dapat melihat list product
+        3. Pengguna dapat memilih product yang akan di checkout berdasarkan penomoran pada list product nya
+        4. Pengguna dapat memasukan quantity dari product yg akan di checkout, dengan syarat
+           quantity tidak boleh melebih stock
+        5. Pengguna dapat melihat total belanja
+
+    > Requierments:
+        1. Buat class Products & Class Store
+        2. Products Class:
+            Property -> name = '', price = 0, stock = 0
+            Method: 
+            - isStockAvailable(qty) : Lakukan pengecekan agar qty tidak melebihi stock
+
+        3. Store Class:
+            Property -> products = [] 
+            Method: 
+            - addProduct(product) : Digunakan untuk menambahkan data object product kedalam property array of products
+            - displayProduct()    : Digunakan untuk menampilkan list data dari array of products 
+                                  : 1. Apel: Rp.xxx (Stock: xx)
+                                  : 2. Jeruk: Rp.xxx (Stock: xx)
+                                  : 3. Anggur: Rp.xxx (Stock: xx)
+                                  
+            - checkout()          :
+                1. Tampilkan list product menggunakan prompt -> User dapat mengisikan nomor product pada prompt tersebut
+                2. Tampilkan prompt untuk input qty. Apabila qty > stock, user diharuskan input ulang qty nya
+                3. Tampilkan total belanja menggunakan alert
+-->
