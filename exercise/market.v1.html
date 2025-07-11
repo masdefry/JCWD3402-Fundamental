@@ -57,6 +57,10 @@
       } x ${qty} = Rp.${this?.products[selectedProduct].price * qty}
     `);
     }
+
+    main(){
+        prompt(`1. Pilih produk \n 2. Checkout`)
+    }
   }
 
   const stores = new Stores();
@@ -64,7 +68,7 @@
   stores.addProduct(new Products('Anggur', 25000, 25));
   stores.addProduct(new Products('Jeruk', 35000, 35));
 
-  stores.checkout();
+  stores.main();
 </script>
 
 <!-- 
@@ -86,7 +90,7 @@
             - isStockAvailable(qty) : Lakukan pengecekan agar qty tidak melebihi stock
 
         3. Store Class:
-            Property -> products = [] 
+            Property -> products = [], carts = [] 
             Method: 
             - addProduct(product) : Digunakan untuk menambahkan data object product kedalam property array of products
             - displayProduct()    : Digunakan untuk menampilkan list data dari array of products 
@@ -94,8 +98,19 @@
                                   : 2. Jeruk: Rp.xxx (Stock: xx)
                                   : 3. Anggur: Rp.xxx (Stock: xx)
                                   
-            - checkout()          :
+            - addToCart()         :
                 1. Tampilkan list product menggunakan prompt -> User dapat mengisikan nomor product pada prompt tersebut
                 2. Tampilkan prompt untuk input qty. Apabila qty > stock, user diharuskan input ulang qty nya
-                3. Tampilkan total belanja menggunakan alert
+                3. Tambahkan data kedalam property array of carts. Apabila data product sudah ada didalam cart, lakukan update qty saja. 
+
+            - checkout()          : 
+                1. Tampilkan list carts menggunakan alert
+                2. Tampilkan prompt untuk input jumlah uang. Apabila uang < total belanja, user diminta untuk input ulang nominal uang nya
+                3. Tampilkan struk belanja dalam bentuk alert
 -->
+
+
+
+{ Apel, 10 }
+
+AddToCart { Apel, 3 }
